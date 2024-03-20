@@ -1,5 +1,10 @@
 *{
+    /* Margins are the space outside an element’s border. 
+    They create a gap between an element and its neighboring elements.*/
     margin: 0;
+
+        /* Padding is the space inside an element’s border. 
+        It affects the area within the element, expanding the internal space.*/
     padding: 0;
     font-family: "Poppins", sans-serif;
     box-sizing: border-box;
@@ -26,7 +31,12 @@ body{
 nav{
     display: flex;
     align-items: center;
+
+    /* CSS justify-content controls how flex items align horizontally in a container. */
     justify-content: space-between;
+
+   /* flex-wrap controls whether flex items should 
+   wrap to the next line when they exceed the container’s width.*/
     flex-wrap: wrap;
 
 }
@@ -36,6 +46,10 @@ nav{
 }
 
 nav ul li{
+
+       /*  The display: inline-block; CSS property allows an element to 
+       behave like an inline element (such as a span or a link) while still 
+       retaining some block-level properties (such as width, height, and margins).*/
     display: inline-block;
     list-style: none;
     margin: 20px;
@@ -44,6 +58,9 @@ nav ul li{
 
 nav ul li a{
     color: #fff;
+
+    /* Text decoration in CSS refers to the visual enhancements applied to text, 
+    such as underlining, overlining, strikethrough, or even blinking.*/
     text-decoration: none;
     font-size: 25px;
     position: relative;
@@ -107,7 +124,46 @@ nav ul li a:hover::after{
 
 .sub-title{
     font-size: 60px;
+
+    /* Font weight in CSS determines how thick or thin characters 
+    in text should be displayed. */
     font-weight: 600;
     color: #fff;
 }
+
+.tab-titles{
+    display: flex;
+    /* marin values, top, left and right, bottom */
+    margin: 20px 0 40px;
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+
+    /* The cursor property in CSS specifies the type of cursor displayed when 
+    hovering over an element, enhancing user experience by providing visual cues 
+    for interaction */
+    cursor: pointer;
+    position: relative;
+
+}
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.7s;
+}
+
+.tab-links.active-link{
+    width: 50%;
+
+}
+
 
